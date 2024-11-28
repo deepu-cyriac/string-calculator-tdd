@@ -51,4 +51,9 @@ describe('stringCalculator', () => {
     test('should handle a custom delimiter of any length', () => {
         expect(calculator.add("//[***]\n1***2***3")).toBe(6);
     });
+
+    //test to check if code handles multiple single-character delimiters
+    test('should handle multiple single-character delimiters', () => {
+        expect(calculator.add("//[*][%]\n1*2%3")).toBe(6);
+    });
 })
