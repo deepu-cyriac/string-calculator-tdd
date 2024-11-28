@@ -32,4 +32,8 @@ describe('stringCalculator', () => {
         expect(calculator.add("1\n2,3")).toBe(6);
     });
 
+    //test to check if code supports different delimiters
+    test('should provide support for different delimiters - specified at begining of input', () => {
+        expect(calculator.add("//;\n1;2")).toBe(3);
+    });
 })
