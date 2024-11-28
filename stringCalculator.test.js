@@ -36,4 +36,8 @@ describe('stringCalculator', () => {
     test('should provide support for different delimiters - specified at begining of input', () => {
         expect(calculator.add("//;\n1;2")).toBe(3);
     });
+
+    test('should throw an exception if negative numbers are present', () => {
+        expect(() => calculator.add("1,-2,3,-4")).toThrow("Negative numbers not allowed: -2, -4");
+    });
 })
