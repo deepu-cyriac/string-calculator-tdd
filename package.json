@@ -1,0 +1,14 @@
+{
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "name": "string-calculator-tdd",
+  "version": "1.0.0",
+  "description": "A String Calculator using Test Driven Development",
+  "main": "stringCalculator.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Deepu Cyriac",
+  "license": "ISC"
+}
