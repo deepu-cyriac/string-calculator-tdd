@@ -10,7 +10,20 @@ class stringCalculator {
         //below code finds the specified delimiter if present and use it to separate the given numbers
         if(numbers.startsWith("//")) {
             const lastIndex = numbers.indexOf("\n");
-            delimiters = new RegExp(numbers.slice(2, lastIndex));
+
+            const delimPart = numbers.slice(2, lastIndex);
+
+            const customDelim = delimPart.match(/\[.*?\]/g);
+            
+            if (customDelim) {
+                //extract delimiters, escape special regex chars, and join into one regex
+                delimiters = new RegExp(
+                    customDelim.map(d => d.slice(1, -1).replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join("|")
+                );
+            } else {
+                //single character custom delimiter
+                delimiters = new RegExp(delimPart.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+            }
             numbers = numbers.slice(lastIndex + 1);
         }
 
