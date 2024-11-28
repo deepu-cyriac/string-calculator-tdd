@@ -4,8 +4,9 @@ class stringCalculator {
         //if input string is empty return 0
         if(!numbers) return 0;
 
-        //if only one number convert it into integer
-        return parseInt(numbers);
+        //below code will work for single number as well as for 2 numbers test case
+        const numberArray = numbers.split(',').map(num => parseInt(num));
+        return numberArray.reduce((sum, num) => sum + num, 0);
     }
 }
 

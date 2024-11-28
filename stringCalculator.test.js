@@ -17,8 +17,9 @@ describe('stringCalculator', () => {
         expect(calculator.add("3")).toBe(3);
     });
 
+    //test to check if sum is returned for two comma-separated numbers
     test('should return sum of two numbers - comma separated', () => {
         expect(calculator.add("2,3")).toBe(5);
     });
-    
+
 })
