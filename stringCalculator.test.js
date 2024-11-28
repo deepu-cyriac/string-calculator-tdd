@@ -15,5 +15,10 @@ describe('stringCalculator', () => {
     //test to check if the number is returned if only one number is provided as input
     test('should return the number if one number is provided', () => {
         expect(calculator.add("3")).toBe(3);
-    })
+    });
+
+    test('should return sum of two numbers - comma separated', () => {
+        expect(calculator.add("2,3")).toBe(5);
+    });
+    
 })
