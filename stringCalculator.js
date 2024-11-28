@@ -4,7 +4,8 @@ class stringCalculator {
         //if input string is empty return 0
         if(!numbers) return 0;
 
-        
+        //if only one number convert it into integer
+        return parseInt(numbers);
     }
 }
 
