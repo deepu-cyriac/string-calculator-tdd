@@ -12,4 +12,8 @@ describe('stringCalculator', () => {
         expect(calculator.add("")).toBe(0);
     });
 
+    //test to check if the number is returned if only one number is provided as input
+    test('should return the number if one number is provided', () => {
+        expect(calculator.add("3")).toBe(3);
+    })
 })
