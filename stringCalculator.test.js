@@ -22,4 +22,9 @@ describe('stringCalculator', () => {
         expect(calculator.add("2,3")).toBe(5);
     });
 
+    //test to check sum for unknown amount of numbers
+    test('should handle an unknown amount of numbers', () => {
+        expect(calculator.add("1,2,3,4,5,6")).toBe(21);
+    });
+
 })
