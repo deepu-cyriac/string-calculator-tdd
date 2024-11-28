@@ -16,6 +16,13 @@ class stringCalculator {
 
         //split the string based on specified delimiters or on , and \n and return sum
         const numberArray = numbers.split(delimiters).map(num => parseInt(num));
+
+        //check for negative number
+        const negativeNumbers = numberArray.filter(num => num < 0);
+        if(negativeNumbers.length) {
+            throw new Error(`Negative numbers not allowed: ${negativeNumbers.join(", ")}`);
+        }
+
         return numberArray.reduce((sum, num) => sum + num, 0);
     }
 }
