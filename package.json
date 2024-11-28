@@ -5,8 +5,9 @@
   "name": "string-calculator-tdd",
   "version": "1.0.0",
   "description": "A String Calculator using Test Driven Development",
-  "main": "stringCalculator.js",
+  "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "jest"
   },
   "author": "Deepu Cyriac",
