@@ -46,4 +46,9 @@ describe('stringCalculator', () => {
     test('if numbers greater than 1000, ignore them', () => {
         expect(calculator.add("2,1001")).toBe(2);
     })
+
+    //test to check if code handles multi character delimiter
+    test('should handle a custom delimiter of any length', () => {
+        expect(calculator.add("//[***]\n1***2***3")).toBe(6);
+    });
 })
