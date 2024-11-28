@@ -27,4 +27,9 @@ describe('stringCalculator', () => {
         expect(calculator.add("1,2,3,4,5,6")).toBe(21);
     });
 
+    //test to check if code handles new lines between numbers
+    test('should handle new lines between numbers', () => {
+        expect(calculator.add("1\n2,3")).toBe(6);
+    });
+
 })
