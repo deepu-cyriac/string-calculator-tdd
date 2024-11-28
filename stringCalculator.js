@@ -14,8 +14,8 @@ class stringCalculator {
             numbers = numbers.slice(lastIndex + 1);
         }
 
-        //split the string based on specified delimiters or on , and \n and return sum
-        const numberArray = numbers.split(delimiters).map(num => parseInt(num));
+        //split the string based on specified delimiters or on , and \n and filter numbers greater than 1000 and then return sum
+        const numberArray = numbers.split(delimiters).map(num => parseInt(num)).filter(num => num <= 1000);
 
         //check for negative number
         const negativeNumbers = numberArray.filter(num => num < 0);
