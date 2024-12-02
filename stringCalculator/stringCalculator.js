@@ -7,8 +7,7 @@ class stringCalculator {
         //regex for newline and comma
         let delimiters = /,|\n/;
 
-        //below code finds the specified delimiter if present and use it to separate the given numbers
-        if(numbers.startsWith("//")) {
+        if(this.isCustomDelimiter(numbers)) {
             const lastIndex = numbers.indexOf("\n");
 
             const delimPart = numbers.slice(2, lastIndex);
@@ -37,6 +36,10 @@ class stringCalculator {
         }
 
         return numberArray.reduce((sum, num) => sum + num, 0);
+    }
+
+    isCustomDelimiter(numbers) {
+        return numbers.startsWith("//");
     }
 }
 
